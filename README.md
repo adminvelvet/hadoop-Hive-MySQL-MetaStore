@@ -1,0 +1,1 @@
+# hadoop-Hive-MySQL-MetaStore
