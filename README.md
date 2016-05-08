@@ -2,11 +2,11 @@
 
 By default, Hive metastore uses a Derby database, and both the database and the metastore service run embedded in the main HiveServer process. Only one process can connect to the metastore database at a time, so it is not really a practical solution but works well for unit tests.
 
-![Hive workflow](https://github.com/gamboabdoulraoufou/hadoop-Hive/blob/master/img/hive_workflow.PNG)
+![MetaStore embeded mode](hadoop-Hive-MySQL-MetaStore/img/metastore_embeded_mode.PNG)
 
 In remote metastore setup, all Hive Clients will make a connection to a metastore server which in turn queries the datastore (MySQL in this example) for metadata.
 
-![Hive workflow](https://github.com/gamboabdoulraoufou/hadoop-Hive/blob/master/img/hive_workflow.PNG)
+![MetaStore remote database](hadoop-Hive-MySQL-MetaStore/img/metastore_remote_mode.PNG)
 
 
 In this post, I will show how to Configure MySQL Metastore for Hive in place of Derby Metastore
