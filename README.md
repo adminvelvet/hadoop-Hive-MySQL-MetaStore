@@ -16,17 +16,16 @@ In this post, I will show how to Configure MySQL Metastore for Hive in place of 
 schematool -dbType derby -initSchema
 ```
 
-# install mysql
+# Install and start MySQL
 ```sh
+# Install MySQL
 sudo apt-get install mysql-server mysql-client python-MySQLdb
-```
 
-# log to mysql
-```sh
+# Start MySQL
 mysql --user=root --password=1234
 ```
 
-# 
+# Create the Database and User
 ```sql
 CREATE DATABASE metastore_db;
 USE metastore;
@@ -40,7 +39,7 @@ SOURCE /home/hadoop/hive-0.12.0-bin/scripts/metastore/upgrade/mysql/hive-schema-
 exit
 ```
 
-# 
+# Configure the MySQL Service and Connector
 ```sh
 sudo apt-get install libmysql-java
 ln -s /usr/share/java/mysql-connector-java.jar /home/hadoop/hive-0.12.0-bin/lib/mysql-connector-java.jar
@@ -53,10 +52,7 @@ schematool -dbType mysql -info
 ```
 
 # Configure the metastore service to communicate with the MySQL database
-javax.jdo.option.ConnectionURL: jdbc:mysql://localhost:3306/metastore_db;createDatabaseIfNotExist=true
-javax.jdo.option.ConnectionDriverName: com.mysql.jdbc.Driver
-javax.jdo.option.ConnectionUserName: root
-javax.jdo.option.ConnectionPassword: 1234
+
 
 ```xml
 <configuration>
