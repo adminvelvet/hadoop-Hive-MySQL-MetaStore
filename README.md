@@ -70,7 +70,7 @@ sudo nano /home/hadoop/hive-0.12.0-bin/conf/hive-site.xml
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://localhost/metastore_db</value>
+    <value>jdbc:mysql://10.128.0.6/metastore_db</value>
     <description>the URL of the MySQL database</description>
   </property>
   <property>
