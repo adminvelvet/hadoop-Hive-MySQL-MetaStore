@@ -44,6 +44,8 @@ SELECT user();
 /* Check privileges for user hive */
 show grants for 'hive'@'%';
 
+grant all privileges on metastore_db.* to 'hive'@'10.128.0.6' IDENTIFIED BY '1234' WITH GRANT OPTION;
+
 /* Quit MySQL */
 exit
 
