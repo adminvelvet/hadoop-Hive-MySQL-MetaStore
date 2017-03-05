@@ -107,3 +107,11 @@ schematool -dbType mysql -initSchema
 hive --service metastore
 
 ```
+
+
+nano /etc/mysql/my.cnf
+
+/* bind-address = 127.0.0.1 */
+
+/etc/init.d/mysql restart
+
