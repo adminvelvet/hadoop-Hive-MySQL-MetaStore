@@ -108,10 +108,12 @@ hive --service metastore
 
 ```
 
+/home/hadoop/hive-0.12.0-bin/conf/hive-site.xml
 
 nano /etc/mysql/my.cnf
 
 /* bind-address = 127.0.0.1 */
+nano /etc/hosts
 
 /etc/init.d/mysql restart
 
