@@ -117,3 +117,5 @@ nano /etc/hosts
 
 /etc/init.d/mysql restart
 
+
+cp /home/hadoop/hive-0.12.0-bin/conf/hive-site.xml /home/hadoop/spark-install/conf/
